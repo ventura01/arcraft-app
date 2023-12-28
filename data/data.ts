@@ -96,3 +96,32 @@ export const howItWorks = {
     },
   ],
 };
+export const testimonialContent = {
+  heading: {
+    title: "testimonials",
+    subTitle: "Hear what our customers say",
+  },
+  testimonials: [
+    {
+      img: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/66.jpg",
+      name: "Dr. Anna Tromp",
+      jobTitle: "Direct Identity Representative",
+      quote:
+        "Molestias et id minus officia harum. Qui unde cumque. Et architecto voluptatem tenetur. Dignissimos quidem tenetur commodi dolorum aspernatur porro.",
+    },
+    {
+      img: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/802.jpg",
+      name: "Lester Kiehn",
+      jobTitle: "Product Response Manager",
+      quote:
+        "Illum sed perspiciatis reprehenderit. Expedita quia sit ad quam. Quod quas voluptate id suscipit possimus animi itaque. Enim sed illo sunt id quisquam aperiam reiciendis. Molestias beatae illum et vitae at voluptas eligendi. Vero esse beatae nostrum distinctio laborum.",
+    },
+    {
+      img: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/37.jpg",
+      name: "Deborah Kutch",
+      jobTitle: "International Web Executive",
+      quote:
+        "Numquam at ut dolor quo autem id. Sunt impedit commodi omnis et voluptas dignissimos rerum ut voluptatem. Provident sunt nesciunt quia ab. Quae odio et explicabo suscipit libero repellat unde qui. Facere tempore maxime vitae itaque repudiandae soluta explicabo.",
+    },
+  ],
+};

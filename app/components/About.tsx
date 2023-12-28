@@ -18,7 +18,7 @@ const About = (props: Props) => {
   return (
     <section id="about" className="relative" ref={ref}>
       <div className="container mx-auto max-w-screen-xl">
-        <div className="container mx-auto max-w-lg py-20">
+        <article className="container mx-auto max-w-lg py-20">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{
@@ -43,7 +43,7 @@ const About = (props: Props) => {
           >
             Where Creativity Meets Structural Integrity
           </motion.h2>
-        </div>
+        </article>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="mx-auto flex max-w-md flex-col justify-center gap-y-6">
             <motion.h3
@@ -98,9 +98,10 @@ const About = (props: Props) => {
                 x: 0,
                 transition: { delay: 1.3, duration: 0.5 },
               }}
-              viewport={{once: true}}
+              viewport={{ once: true }}
               style={{ y: img1 }}
               className="z-[5]"
+              role="image"
             >
               <Image
                 src="/img/about-img-1-min.jpg"
@@ -122,6 +123,7 @@ const About = (props: Props) => {
                 y: img2,
               }}
               className="absolute left-[800px] -z-10"
+              role="image"
             >
               <Image
                 src="/img/dots.svg"

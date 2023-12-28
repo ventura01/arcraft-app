@@ -19,7 +19,10 @@ const Hero = (props: Props) => {
     <section ref={ref} className="mx-4 lg:mx-0">
       <div className="container mx-auto max-w-screen-xl">
         <div className="mx-auto grid w-full grid-cols-1 items-center justify-between lg:h-screen lg:min-h-[700px] lg:grid-cols-2">
-          <div className="relative z-[3] py-10 lg:py-0 lg:left-28">
+          <article
+            // role="article"
+            className="relative z-[3] py-10 lg:left-28 lg:py-0"
+          >
             <motion.span
               className="mb-5 inline-block text-[12.5px] tracking-[3px] text-gray-400"
               initial={{ opacity: 0, y: 20 }}
@@ -30,7 +33,7 @@ const Hero = (props: Props) => {
               WELCOME
             </motion.span>
             <motion.h1
-              className="mb-5 inline-block capitalize text-gray-800 text-4xl lg:text-6xl"
+              className="mb-5 inline-block text-4xl capitalize text-gray-800 lg:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -61,10 +64,10 @@ const Hero = (props: Props) => {
                 btnType="button"
               />
             </motion.div>
-          </div>
+          </article>
           <div>
             <motion.div
-              className="relative z-[2] lg:right-28 bg-cover bg-center"
+              className="relative z-[2] bg-cover bg-center lg:right-28"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{
                 opacity: 1,
@@ -73,6 +76,7 @@ const Hero = (props: Props) => {
               }}
               viewport={{ once: true }}
               style={{ y: imgScroll1 }}
+              role="image"
             >
               <Image
                 src="/img/hero-img-1-min.jpg"
@@ -83,7 +87,7 @@ const Hero = (props: Props) => {
               />
             </motion.div>
             <motion.div
-              className="absolute lg:left-[650px] bottom-0 z-[1] lg:bottom-[200px]"
+              className="absolute bottom-0 z-[1] lg:bottom-[200px] lg:left-[650px]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{
                 opacity: 1,

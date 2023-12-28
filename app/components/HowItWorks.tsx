@@ -22,7 +22,7 @@ const HowItWorks = (props: Props) => {
       <section id="howitworks" className="py-20">
         <div className="container mx-auto max-w-screen-xl">
           <div className="grid max-w-3xl grid-cols-1 py-20 lg:grid-cols-2 lg:items-end">
-            <div>
+            <article>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{
@@ -47,7 +47,7 @@ const HowItWorks = (props: Props) => {
               >
                 Where Creativity Meets Structural Integrity
               </motion.h2>
-            </div>
+            </article>
             <div>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -80,26 +80,30 @@ const HowItWorks = (props: Props) => {
                 viewport={{ once: true }}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 key={index}
-                className="group relative overflow-hidden bg-white px-10 pb-20 pt-28 duration-300 hover:bg-[#fb2576]"
+                className="group relative overflow-hidden bg-white px-10 pb-20 pt-28 duration-300 hover:bg-[#fb2576] hover:shadow-xl"
               >
                 <div>
-                  <div className="flex flex-col gap-y-5">
-                    <span className="absolute left-3 text-gray-400 group-hover:text-white group-hover:opacity-20">
-                      {step.number}
-                    </span>
-                    <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
-                      {step.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-gray-500 group-hover:text-white">
-                      {step.description}
-                    </p>
-                    <div>
-                      <Link
-                        href={step.btn.href}
-                        className="border-b-2 border-violet-500 pb-2 text-xs font-semibold uppercase tracking-widest text-gray-800 first-letter:capitalize group-hover:border-white group-hover:text-white"
-                      >
-                        {step.btn.label}
-                      </Link>
+                  <div className="">
+                    <div className="flex gap-x-3">
+                      <span className="text-gray-400 group-hover:text-white group-hover:opacity-20">
+                        {step.number}
+                      </span>
+                      <div className="flex flex-col gap-y-5">
+                        <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white">
+                          {step.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-gray-500 group-hover:text-white">
+                          {step.description}
+                        </p>
+                        <div className="pt-5">
+                          <Link
+                            href={step.btn.href}
+                            className="border-b-2 border-violet-500 pb-2 text-xs font-semibold uppercase tracking-widest text-gray-800 first-letter:capitalize group-hover:border-white group-hover:text-white"
+                          >
+                            {step.btn.label}
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <span className="absolute -top-[130px] left-3 text-[200px] font-semibold text-gray-100 group-hover:text-white group-hover:opacity-20">
@@ -116,7 +120,7 @@ const HowItWorks = (props: Props) => {
         </div>
       </section>
       <section className="relative">
-        <div className="absolute -top-64 -z-10 w-full bg-violet-600 pb-32 lg:pt-60">
+        <div className="absolute -top-64 -z-10 w-full bg-violet-700 pb-32 lg:pt-60">
           <div className="container mx-auto grid max-w-4xl grid-cols-1 gap-5 md:grid-cols-2">
             {howItWorks.features.map((feat, index) => {
               index *= 0.2;
