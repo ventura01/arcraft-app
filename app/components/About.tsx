@@ -16,7 +16,7 @@ const About = (props: Props) => {
   const img1 = useTransform(scrollYProgress, [0, 1], ["30%", "-10%"]);
   const img2 = useTransform(scrollYProgress, [0, 1], ["100%", "-250%"]);
   return (
-    <section id="about" className="relative" ref={ref}>
+    <section id="about" className="relative py-20" ref={ref}>
       <div className="container mx-auto max-w-screen-xl">
         <article className="container mx-auto max-w-lg py-20">
           <motion.span
@@ -29,7 +29,7 @@ const About = (props: Props) => {
             viewport={{ once: true }}
             className="mb-5 block text-center text-[12.5px] uppercase tracking-[3px] text-gray-400"
           >
-            about us
+            acerca de
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ const About = (props: Props) => {
             viewport={{ once: true }}
             className="text-center text-4xl text-gray-800"
           >
-            Where Creativity Meets Structural Integrity
+            Nosotros
           </motion.h2>
         </article>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -56,7 +56,7 @@ const About = (props: Props) => {
               viewport={{ once: true }}
               className="text-2xl font-semibold text-gray-800"
             >
-              Architects of Innovation, Builders of Beauty.
+              Ofrecemos lo más innovador y lo que es tendencia en la moda.
             </motion.h3>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -68,10 +68,14 @@ const About = (props: Props) => {
               viewport={{ once: true }}
               className="text-base leading-relaxed text-gray-500"
             >
-              Every structure we conceive tells a unique story, reflecting the
-              aspirations and dreams of our clients. From conceptualization to
-              realization, we immerse ourselves in the art of design, striving
-              to capture the essence of each project.
+              En Zulma Fashion, creemos en la moda como una forma de
+              expresión personal. Nos dedicamos a ofrecerte
+              una plataforma donde puedas descubrir tu estilo único y sentirte
+              seguro de ti mismo en cada atuendo que elijas. Nuestro equipo de
+              expertos en moda está siempre atento a las últimas tendencias y
+              novedades del mundo de la moda, para asegurarnos de que encuentres
+              las piezas perfectas que se adapten a tu estilo de vida y
+              personalidad.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -111,7 +115,7 @@ const About = (props: Props) => {
                 className="object-cover object-center"
               />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{
                 opacity: 1,
@@ -132,7 +136,7 @@ const About = (props: Props) => {
                 alt="dots-about-img"
                 className=""
               />
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>

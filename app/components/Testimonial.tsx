@@ -40,7 +40,7 @@ const Testimonial = (props: Props) => {
   // });
 
   return (
-    <section id="testimonial" className=" mt-[590px] bg-[#f3f5f7] py-20">
+    <section id="testimonial" className="bg-[#f3f5f7] py-20">
       <div className="container mx-auto max-w-screen-xl overflow-y-visible">
         <div className="container mx-auto max-w-sm">
           <article>

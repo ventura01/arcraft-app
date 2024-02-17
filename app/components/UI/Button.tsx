@@ -12,7 +12,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`${buttonStyles} py-4 px-5`}
+      className={`${buttonStyles} py-3 px-5`}
       type={btnType}
       disabled={isDisabled}
       onClick={handleClick}

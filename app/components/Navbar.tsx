@@ -45,8 +45,14 @@ const Navbar = (props: Props) => {
     <header role="banner" className="mx-4 py-10 lg:mx-0">
       <div className="container mx-auto flex max-w-screen-xl items-center justify-between">
         <div>
-          <Link href="/" className="text-[22px] font-bold text-gray-700">
-            arcraft<span className="text-violet-700">.</span>
+          <Link
+            href="/"
+            className="text-[18px] font-light uppercase text-gray-700"
+          >
+            Zulma{" "}
+            <span className="font-semibold uppercase text-gray-500">
+              fashion
+            </span>
           </Link>
         </div>
         <nav role="navigation" className="hidden md:flex">
@@ -55,7 +61,7 @@ const Navbar = (props: Props) => {
               <li
                 role="listitem"
                 key={link.title}
-                className="text-xs font-semibold tracking-[2px] text-gray-700 first-letter:capitalize"
+                className="text-xs tracking-[2px] text-gray-700 first-letter:capitalize"
               >
                 <Link
                   href={link.url}

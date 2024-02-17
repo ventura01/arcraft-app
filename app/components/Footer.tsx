@@ -9,11 +9,11 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer id="info" className="mt-[584px] bg-gray-50 py-20">
+    <footer id="info" className="bg-gray-50 py-20">
       <div className="container mx-auto grid max-w-screen-xl grid-cols-1 lg:grid-cols-4">
         <div>
-          <Link href="/" className="text-[22px] font-bold text-gray-700">
-            arcraft<span className="text-violet-700">.</span>
+          <Link href="/" className="text-[16px] font-light text-gray-700">
+            ZULMA <span className="font-semibold text-gray-500">FASHION</span>
           </Link>
         </div>
         {footerLinks.map((link) => (

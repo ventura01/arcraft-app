@@ -7,8 +7,9 @@ const nextConfig = {
       "cloudflare-ipfs.com",
       "placeimg.com",
       "picsum.photos",
+      "firebasestorage.googleapis.com",
     ],
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

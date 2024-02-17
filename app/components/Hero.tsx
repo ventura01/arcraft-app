@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
         <div className="mx-auto grid w-full grid-cols-1 items-center justify-between lg:h-screen lg:min-h-[700px] lg:grid-cols-2">
           <article
             // role="article"
-            className="relative z-[3] py-10 lg:left-28 lg:py-0"
+            className="relative z-[3] py-10 lg:left-20 lg:py-0"
           >
             <motion.span
               className="mb-5 inline-block text-[12.5px] tracking-[3px] text-gray-400"
@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
               transition={{ delay: 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              WELCOME
+              BIENVENIDO
             </motion.span>
             <motion.h1
               className="mb-5 inline-block text-4xl capitalize text-gray-800 lg:text-6xl"
@@ -39,7 +39,7 @@ const Hero = (props: Props) => {
               transition={{ delay: 0.2, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Where Creativity Meets Structural Integrity
+              El sitio donde encontrarás ropa de moda femenina, masulina y artículos para el hogar
             </motion.h1>
             <motion.p
               className="mb-10 w-auto max-w-xl text-base leading-relaxed text-gray-500 lg:mb-12 lg:w-screen lg:text-lg"
@@ -48,9 +48,8 @@ const Hero = (props: Props) => {
               transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Welcome to a world where creativity meets unwavering structural
-              integrity. At arcraft, we believe that exceptional design goes
-              hand in hand with meticulous engineering.
+              Descubre todo lo que necesitas para expresar tu estilo único y
+              marcar tendencia en cualquier ocasión.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -59,7 +58,7 @@ const Hero = (props: Props) => {
               viewport={{ once: true }}
             >
               <Button
-                title="ver proyectos"
+                title="ver productos"
                 buttonStyles="bg-violet-500 text-sm hover:bg-violet-400 text-white uppercase"
                 btnType="button"
               />
@@ -67,7 +66,7 @@ const Hero = (props: Props) => {
           </article>
           <div>
             <motion.div
-              className="relative z-[2] bg-cover bg-center lg:right-28"
+              className="relative z-[2] bg-cover bg-center lg:right-20"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{
                 opacity: 1,
@@ -86,7 +85,7 @@ const Hero = (props: Props) => {
                 className=""
               />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               className="absolute bottom-0 z-[1] lg:bottom-[200px] lg:left-[650px]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{
@@ -98,7 +97,7 @@ const Hero = (props: Props) => {
               style={{ y: imgScroll2 }}
             >
               <Image src="/img/dots.svg" width={250} height={250} alt="dots" />
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
