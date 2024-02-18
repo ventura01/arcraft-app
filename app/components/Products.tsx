@@ -46,7 +46,7 @@ const Products = (props: Props) => {
             Productos
           </motion.h2>
         </article>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 md:gap-5">
           {products.map((product: any) => (
             <div key={product.id}><ProductCard products={product}/></div>
           ))}

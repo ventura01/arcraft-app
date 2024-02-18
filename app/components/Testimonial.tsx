@@ -11,34 +11,19 @@ import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 type Props = {};
 
 const Testimonial = (props: Props) => {
-  const [sliderIndex, setSliderIndex] = useState(0);
-  const [isEnd, setIsEnd] = useState(null);
-  const [isBeginning, setIsBeginning] = useState(null);
-  const sliderRef = useRef<SwiperRef | null>(null!);
-
-  // useEffect(() => {
-  //   setIsEnd(sliderRef.current?.swiper.isEnd);
-  //   setIsBeginning(sliderRef.current?.swiper.isBeginning);
-  // }, []);
-  //! metodo 1
-  // const prevHandler = () => {
-  //   if (!sliderRef.current) return;
-  //   sliderRef.current.swiper.slidePrev();
-  // };
-  // const nextHandler = () => {
-  //   if (!sliderRef.current) return;
-  //   sliderRef.current.swiper.slideNext();
-  // };
-  //! metodo 2
-  // const prevHandler = useCallback(() => {
-  //   if (!sliderRef.current) return;
-  //   sliderRef.current.swiper.slidePrev();
-  // });
-  // const nextHandler = useCallback(() => {
-  //   if (!sliderRef.current) return;
-  //   sliderRef.current.swiper.slideNext();
-  // });
-
+  const [index, setIndex] = useState(0);
+  const handleNext = () => {
+    if (index === testimonialContent.testimonials.length - 1) {
+      return setIndex(0);
+    }
+    setIndex(index + 1);
+  };
+  const handlePrev = () => {
+    if (index === 0) {
+      return setIndex(testimonialContent.testimonials.length - 1);
+    }
+    setIndex(index - 1);
+  };
   return (
     <section id="testimonial" className="bg-[#f3f5f7] py-20">
       <div className="container mx-auto max-w-screen-xl overflow-y-visible">
@@ -70,56 +55,7 @@ const Testimonial = (props: Props) => {
             </motion.h2>
           </article>
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { delay: 0.9, duration: 0.5 },
-          }}
-          viewport={{ once: true }}
-          className=""
-        >
-          <Swiper
-            ref={sliderRef}
-            speed={700}
-            spaceBetween={30}
-            onSlideChange={(swiper) => setSliderIndex(swiper.activeIndex)}
-            className="relative z-50 mb-7 mt-20 flex items-center py-32"
-          >
-            {testimonialContent.testimonials.map((elem, index) => (
-              <SwiperSlide className="bg-white" key={elem.name}>
-                <div className="grid grid-cols-1 lg:grid-cols-3">
-                  <div className="">
-                    <Image
-                      src={elem.img}
-                      width={379}
-                      height={320}
-                      alt={elem.name}
-                      className="w-full object-cover object-center"
-                    />
-                  </div>
-                  <div className="relative flex flex-col justify-center gap-y-6 px-4 lg:col-start-2 lg:col-end-4 lg:px-16">
-                    <div>
-                      <span className="absolute top-2 text-[200px] text-violet-600">
-                        &ldquo;
-                      </span>
-                    </div>
-                    <blockquote className="">{elem.quote}</blockquote>
-                    <div className=""></div>
-                    <div className="flex gap-x-3">
-                      <strong className="text-sm">{elem.name}</strong>
-                      <span>&mdash;</span>
-                      <span className="text-sm text-gray-500">
-                        {elem.jobTitle}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </motion.div>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{
@@ -129,40 +65,44 @@ const Testimonial = (props: Props) => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="flex gap-x-3">
-            <div
-              // onClick={prevHandler}
-              className={`${
-                isBeginning === true
-                  ? "!cursor-pointer bg-gray-300 text-gray-600 opacity-30"
-                  : "bg-violet-600 text-white opacity-100"
-              } group relative top-0 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out`}
-            >
-              <CaretLeft
-                size={32}
-                className={`text-primary text-3xl transition-all duration-300 ease-in-out group-hover:text-white ${
-                  isBeginning === true
-                    ? "group-hover:text-gray-600"
-                    : "group-hover:text-white"
-                }`}
-              />
+          <div className="md:max-w-xl">
+            <div className="relative mt-20 mb-3 rounded-xl border-2 bg-slate-700 px-5 pb-10 pt-16 shadow-xl">
+              <div className="">
+                <Image
+                  src={testimonialContent.testimonials[index].img}
+                  // fill
+                  width={300}
+                  height={300}
+                  alt="Test-image"
+                  loading="lazy"
+                  className="absolute right-1/2 top-0 w-20 h-20 -translate-y-1/2 translate-x-1/2 transform border-4 object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <p className="mb-5 text-gray-300">
+                  {testimonialContent.testimonials[index].quote}
+                </p>
+                <h4 className="text-right text-lg font-medium capitalize text-indigo-500">
+                  {testimonialContent.testimonials[index].name}
+                </h4>
+                <span className="block text-right text-sm text-indigo-300">
+                  {testimonialContent.testimonials[index].jobTitle}
+                </span>
+              </div>
             </div>
-            <div
-              // onClick={nextHandler}
-              className={`${
-                isEnd === true
-                  ? "!cursor-pointer bg-gray-300 text-gray-600 opacity-30"
-                  : "bg-violet-600 text-white opacity-100"
-              } group relative top-0 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out`}
-            >
-              <CaretRight
-                size={32}
-                className={`text-primary text-3xl transition-all duration-300 ease-in-out group-hover:text-white ${
-                  isEnd === true
-                    ? "group-hover:text-gray-600"
-                    : "group-hover:text-white"
-                }`}
-              />
+            <div className="flex justify-center gap-x-3">
+              <button
+                onClick={handleNext}
+                className="rounded-full bg-gray-700 px-3 py-3 text-indigo-300"
+              >
+                <CaretLeft size={16} />
+              </button>
+              <button
+                onClick={handleNext}
+                className="rounded-full bg-gray-700 px-3 py-3 text-indigo-300"
+              >
+                <CaretRight size={16} />
+              </button>
             </div>
           </div>
         </motion.div>

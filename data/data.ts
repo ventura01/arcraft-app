@@ -22,8 +22,8 @@ export const footerLinks = [
   {
     title: "acerca",
     links: [
-      { title: "preguntas frecuentes", url: "/faq" },
-      { title: "centro de ayuda", url: "/help" },
+      // { title: "preguntas frecuentes", url: "/faq" },
+      // { title: "centro de ayuda", url: "/help" },
       // { title: "blog", url: "/" },
       { title: "términos y condiciones", url: "/conditions" },
       { title: "política de privacidad", url: "/privacy" },
@@ -33,7 +33,7 @@ export const footerLinks = [
     title: "empresa",
     links: [
       { title: "eventos", url: "/" },
-      { title: "socios comerciales", url: "/" },
+      // { title: "socios comerciales", url: "/" },
       { title: "historia", url: "/" },
     ],
   },
@@ -98,26 +98,26 @@ export const howItWorks = {
 };
 export const testimonialContent = {
   heading: {
-    title: "testimonials",
-    subTitle: "Hear what our customers say",
+    title: "testimonios",
+    subTitle: "Escucha lo que nuestros clientes opinan",
   },
   testimonials: [
     {
-      img: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/66.jpg",
+      img: "/img/avatar1.jpg",
       name: "Dr. Anna Tromp",
       jobTitle: "Direct Identity Representative",
       quote:
-        "Molestias et id minus officia harum. Qui unde cumque. Et architecto voluptatem tenetur. Dignissimos quidem tenetur commodi dolorum aspernatur porro.",
+        "Bellisima et id minus officia harum. Qui unde cumque. Et architecto voluptatem tenetur. Dignissimos quidem tenetur commodi dolorum aspernatur porro.",
     },
     {
-      img: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/802.jpg",
+      img: "/img/avatar2.jpg",
       name: "Lester Kiehn",
       jobTitle: "Product Response Manager",
       quote:
         "Illum sed perspiciatis reprehenderit. Expedita quia sit ad quam. Quod quas voluptate id suscipit possimus animi itaque. Enim sed illo sunt id quisquam aperiam reiciendis. Molestias beatae illum et vitae at voluptas eligendi. Vero esse beatae nostrum distinctio laborum.",
     },
     {
-      img: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/37.jpg",
+      img: "/img/avatar3.jpg",
       name: "Deborah Kutch",
       jobTitle: "International Web Executive",
       quote:
