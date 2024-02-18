@@ -45,7 +45,7 @@ const About = (props: Props) => {
           </motion.h2>
         </article>
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="mx-auto flex max-w-md flex-col justify-center gap-y-6">
+          <div className="mx-4 sm:mx-auto flex max-w-md flex-col justify-center gap-y-6">
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{
@@ -54,7 +54,7 @@ const About = (props: Props) => {
                 transition: { delay: 0.5, duration: 0.5 },
               }}
               viewport={{ once: true }}
-              className="text-2xl font-semibold text-gray-800"
+              className="text-2xl text-center sm:text-left font-semibold text-gray-800"
             >
               Ofrecemos lo más innovador y lo que es tendencia en la moda.
             </motion.h3>
@@ -66,7 +66,7 @@ const About = (props: Props) => {
                 transition: { delay: 0.7, duration: 0.5 },
               }}
               viewport={{ once: true }}
-              className="text-base leading-relaxed text-gray-500"
+              className="text-base text-justify sm:text-left leading-relaxed text-gray-500"
             >
               En Zulma Fashion, creemos en la moda como una forma de
               expresión personal. Nos dedicamos a ofrecerte
@@ -90,11 +90,11 @@ const About = (props: Props) => {
               <Button
                 title="ver info"
                 btnType="button"
-                buttonStyles="bg-violet-500 text-white hover:bg-violet-400 uppercase text-sm"
+                buttonStyles="bg-violet-500 text-white w-full sm:w-auto hover:bg-violet-400 uppercase text-sm"
               />
             </motion.div>
           </div>
-          <div className="w-full">
+          <div className="w-full flex justify-center">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{
@@ -104,7 +104,7 @@ const About = (props: Props) => {
               }}
               viewport={{ once: true }}
               style={{ y: img1 }}
-              className="z-[5]"
+              className="z-[5] mx-4 sm:mx-0"
               role="image"
             >
               <Image

@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { products } from "@/data/data";
 import Button from "./UI/Button";
+import { formatPrice } from "./UI/FormatPrice";
 
 type Props = {};
 interface ProductCardProps {
@@ -25,12 +26,26 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
           />
         </div>
         <div className="flex flex-col gap-y-2 py-5">
-          <h2 className="text-lg uppercase text-slate-700 font-bold">{products.brand}</h2>
+          <h2 className="text-lg font-bold uppercase text-slate-700">
+            {products.brand}
+          </h2>
           {/* <h3>{products.name}</h3> */}
-          <p className="text-sm text-slate-700">{products.description.substring(0, 36) + "..."}</p>
-          <p className="text-xs text-slate-400 uppercase">{products.category}</p>
-          <div><span>{products.price}</span></div>
-          <div className="mt-5"><Button title="VER PRODUCTO" btnType="button" buttonStyles="bg-violet-500 text-white text-xs"/></div>
+          <p className="text-sm text-slate-700">
+            {products.description.substring(0, 106) + "..."}
+          </p>
+          <p className="text-xs uppercase text-slate-400">
+            {products.category}
+          </p>
+          <div>
+            <span className="font-semibold">{formatPrice(products.price)}</span>
+          </div>
+          <div className="mt-5 ">
+            <Button
+              title="VER PRODUCTO"
+              btnType="button"
+              buttonStyles="bg-violet-500 text-white text-xs w-full"
+            />
+          </div>
         </div>
       </div>
     </div>

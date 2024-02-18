@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
         <div className="mx-auto grid w-full grid-cols-1 items-center justify-between lg:h-screen lg:min-h-[700px] lg:grid-cols-2">
           <article
             // role="article"
-            className="relative z-[3] py-10 lg:left-20 lg:py-0"
+            className="relative z-[3] py-10 sm:left-0 lg:left-20 lg:py-0"
           >
             <motion.span
               className="mb-5 inline-block text-[12.5px] tracking-[3px] text-gray-400"
@@ -57,11 +57,13 @@ const Hero = (props: Props) => {
               transition={{ delay: 0.5, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Button
-                title="ver productos"
-                buttonStyles="bg-violet-500 text-sm hover:bg-violet-400 text-white uppercase"
-                btnType="button"
-              />
+              <div>
+                <Button
+                  title="ver productos"
+                  buttonStyles="bg-violet-500 text-sm hover:bg-violet-400 text-white uppercase w-full sm:w-auto"
+                  btnType="button"
+                />
+              </div>
             </motion.div>
           </article>
           <div>
