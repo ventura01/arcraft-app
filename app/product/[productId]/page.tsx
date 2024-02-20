@@ -1,4 +1,3 @@
-
 import React from "react";
 import ProductDetail from "./ProductDetail";
 import { getProducts, products } from "@/data/data";
@@ -12,11 +11,7 @@ const Product = async ({ params }: { params: ParamsProps }) => {
   const { productId } = params;
   const products = await getProducts();
   // console.log(product)
-  return (
-    <div>
-      <ProductDetail product={product} />
-    </div>
-  );
+  return <div>{/* <ProductDetail product={product} /> */}</div>;
 };
 
 export default Product;
