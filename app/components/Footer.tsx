@@ -20,7 +20,7 @@ const Footer = (props: Props) => {
       <div className="container mx-auto grid max-w-screen-xl grid-cols-1 gap-y-5 md:gap-y-0 lg:grid-cols-4">
         <div className="flex flex-col items-center md:items-start">
           <Link href="/" className="text-[16px] font-semibold text-gray-700">
-            ZULMA <span className="font-light text-gray-500">FASHION</span>
+            ZULMA <span className="font-light text-gray-500 uppercase">store</span>
           </Link>
           <div className="mt-2 flex flex-col items-center gap-y-2 md:items-start">
             <div className="flex justify-center gap-x-1">
@@ -44,7 +44,7 @@ const Footer = (props: Props) => {
             <div className="">
               {link.links.map((navlink) => (
                 <ul key={navlink.title}>
-                  <li className="flex flex-col items-center text-sm text-gray-500 first-letter:capitalize md:items-start">
+                  <li className="flex flex-col items-center text-sm text-gray-500 capitalize md:items-start">
                     <Link href={navlink.url}>{navlink.title}</Link>
                   </li>
                 </ul>

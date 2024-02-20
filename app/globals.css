@@ -5,3 +5,6 @@
 ::selection {
   background-color: rgba(74, 47, 189, 0.08);
 }
+html {
+  scroll-behavior: smooth !important;
+}

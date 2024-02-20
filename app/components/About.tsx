@@ -45,56 +45,7 @@ const About = (props: Props) => {
           </motion.h2>
         </article>
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="mx-4 sm:mx-auto flex max-w-md flex-col justify-center gap-y-6">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.5, duration: 0.5 },
-              }}
-              viewport={{ once: true }}
-              className="text-2xl text-center sm:text-left font-semibold text-gray-800"
-            >
-              Ofrecemos lo más innovador y lo que es tendencia en la moda.
-            </motion.h3>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.7, duration: 0.5 },
-              }}
-              viewport={{ once: true }}
-              className="text-base text-justify sm:text-left leading-relaxed text-gray-500"
-            >
-              En Zulma Fashion, creemos en la moda como una forma de
-              expresión personal. Nos dedicamos a ofrecerte
-              una plataforma donde puedas descubrir tu estilo único y sentirte
-              seguro de ti mismo en cada atuendo que elijas. Nuestro equipo de
-              expertos en moda está siempre atento a las últimas tendencias y
-              novedades del mundo de la moda, para asegurarnos de que encuentres
-              las piezas perfectas que se adapten a tu estilo de vida y
-              personalidad.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: 0.9, duration: 0.5 },
-              }}
-              viewport={{ once: true }}
-              className="pt-5"
-            >
-              <Button
-                title="ver info"
-                btnType="button"
-                buttonStyles="bg-violet-500 text-white w-full sm:w-auto hover:bg-violet-400 uppercase text-sm"
-              />
-            </motion.div>
-          </div>
-          <div className="w-full flex justify-center">
+          <div className="relative">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{
@@ -112,7 +63,7 @@ const About = (props: Props) => {
                 width={500}
                 height={750}
                 alt="about-img"
-                className="object-cover object-center"
+                className="w-full object-cover object-center"
               />
             </motion.div>
             {/* <motion.div
@@ -137,6 +88,53 @@ const About = (props: Props) => {
                 className=""
               />
             </motion.div> */}
+          </div>
+          <div className="mx-4 flex max-w-md flex-col justify-center gap-y-6 sm:mx-auto">
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.5, duration: 0.5 },
+              }}
+              viewport={{ once: true }}
+              className="text-center text-2xl font-semibold text-gray-800 sm:text-left"
+            >
+              Ofrecemos lo más innovador y lo que es tendencia en la moda.
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.7, duration: 0.5 },
+              }}
+              viewport={{ once: true }}
+              className="text-justify text-base leading-relaxed text-gray-500 sm:text-left"
+            >
+              En <strong>Zulma Store</strong>, creemos en la moda como una forma
+              de expresión personal. Nos dedicamos a ofrecerte una plataforma
+              donde puedas descubrir tu estilo único y sentirte seguro de ti
+              mismo en cada atuendo que elijas. Nuestro equipo de ventas está
+              siempre atento para asegurarse que encuentres las piezas perfectas
+              que se adapten a tu estilo de vida y personalidad.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.9, duration: 0.5 },
+              }}
+              viewport={{ once: true }}
+              className="pt-5"
+            >
+              {/* <Button
+                title="ver info"
+                btnType="button"
+                buttonStyles="bg-violet-500 text-white w-full sm:w-auto hover:bg-violet-400 uppercase text-sm"
+              /> */}
+            </motion.div>
           </div>
         </div>
       </div>

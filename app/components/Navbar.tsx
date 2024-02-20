@@ -51,7 +51,7 @@ const Navbar = (props: Props) => {
           >
             Zulma{" "}
             <span className="font-light uppercase text-gray-500">
-              fashion
+              store
             </span>
           </Link>
         </div>

@@ -57,13 +57,13 @@ const Hero = (props: Props) => {
               transition={{ delay: 0.5, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <div>
+              {/* <div>
                 <Button
                   title="ver productos"
                   buttonStyles="bg-violet-500 text-sm hover:bg-violet-400 text-white uppercase w-full sm:w-auto"
                   btnType="button"
                 />
-              </div>
+              </div> */}
             </motion.div>
           </article>
           <div>

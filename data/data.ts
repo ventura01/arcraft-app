@@ -7,10 +7,11 @@ import {
   Carrot,
   Coffee,
 } from "@phosphor-icons/react";
+import { Product } from "./types";
 
 export const navLinks = [
   { title: "inicio", url: "/" },
-  // { title: "servicios", url: "#services" },
+  { title: "Nosotros", url: "#about" },
   // { title: "soluciones", url: "#solutions" },
   // { title: "testimonios", url: "#testimonials" },
   { title: "blog", url: "#blog" },
@@ -25,8 +26,8 @@ export const footerLinks = [
       // { title: "preguntas frecuentes", url: "/faq" },
       // { title: "centro de ayuda", url: "/help" },
       // { title: "blog", url: "/" },
-      { title: "términos y condiciones", url: "/conditions" },
-      { title: "política de privacidad", url: "/privacy" },
+      { title: "términos y condiciones", url: "/" },
+      { title: "política de privacidad", url: "/" },
     ],
   },
   {
@@ -125,301 +126,125 @@ export const testimonialContent = {
     },
   ],
 };
-export const products = [
+export const products: Product[] = [
   {
-    id: "64a654593e91b8e73a351e9b",
+    id: 583,
     name: "iphone 14",
-    description: "Excepturi maxime eligendi nulla repellat architecto qui voluptatem eius. Est commodi assumenda. Aliquid eum magnam autem reiciendis omnis assumenda veritatis neque. Delectus omnis quaerat cumque occaecati. Non est asperiores doloremque vel voluptatibus.",
+    description:
+      "Excepturi maxime eligendi nulla repellat architecto qui voluptatem eius. Est commodi assumenda. Aliquid eum magnam autem reiciendis omnis assumenda veritatis neque. Delectus omnis quaerat cumque occaecati. Non est asperiores doloremque vel voluptatibus.",
     price: 11.99,
     brand: "Brakus",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "White",
-        colorCode: "#FFFFFF",
-        image: "/img/prod-1.jpg",
-      },
-      // {
-      //   color: "Gray",
-      //   colorCode: "#808080",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622165836-iphone14-gray.png?alt=media&token=58f684db-998e-43eb-aa06-efe3d6ccfad4",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-1.jpg",
+    
   },
   {
-    id: "64a4ebe300900d44bb50628a",
-    name: "Logitech MX Keys Advanced Wireless Illuminated Keyboard, Tactile Responsive Typing, Backlighting, Bluetooth, USB-C, Apple macOS, Microsoft Windows, Linux, iOS, Android, Metal Build (Black)",
-    description:
-      "At unde nobis minus laboriosam est dolor in. Aut placeat rerum rerum et accusantium. Deleniti reprehenderit ipsa molestiae quo mollitia qui nobis aliquam. Necessitatibus accusamus earum rerum rem quis unde est. Earum non deleniti veniam eum natus quas commodi. Repellat molestiae enim ea.",
-    price: 89.99,
-    brand: "Gerlach",
-    category: "Ropa / Accesorio",
-    inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-2.jpg",
-      },
-    ],
-    reviews: [
-      {
-        id: "64a65a6158b470c6e06959ee",
-        userId: "6475af156bad4917456e6e1e",
-        productId: "64a4ebe300900d44bb50628a",
-        rating: 5,
-        comment: "good",
-        createdDate: "2023-07-06T06:08:33.067Z",
-        user: {
-          id: "6475af156bad4917456e6e1e",
-          name: "Charles",
-          email: "example@gmail.com",
-          emailVerified: null,
-          image:
-            "https://lh3.googleusercontent.com/a/AAcHTteOiCtILLBWiAoolIW9PJH-r5825pBDl824_8LD=s96-c",
-          hashedPassword: null,
-          createdAt: "2023-05-30T08:08:53.979Z",
-          updatedAt: "2023-05-30T08:08:53.979Z",
-          role: "ADMIN",
-        },
-      },
-    ],
-  },
-  {
-    id: "648437b38c44d52b9542e340",
+    id: 85,
     name: "Apple iPhone 12, 64GB",
     description:
-      'Facere commodi eligendi. Sit incidunt nisi aut sequi et. Iure saepe eligendi voluptas rem ut qui voluptatem explicabo. Aut necessitatibus nulla et aspernatur in suscipit ea consectetur. Adipisci aperiam alias occaecati.',
+      "Facere commodi eligendi. Sit incidunt nisi aut sequi et. Iure saepe eligendi voluptas rem ut qui voluptatem explicabo. Aut necessitatibus nulla et aspernatur in suscipit ea consectetur. Adipisci aperiam alias occaecati.",
     price: 49.99,
     brand: "Larkin",
-    category: "Ropa / Accesorio",
+    category: "Accesorio",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-3.jpg",
-      },
-      // {
-      //   color: "Blue",
-      //   colorCode: " #0000FF",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1686386607274-iphone12-blue.jpg?alt=media&token=e83a9b13-86b6-4518-9f1e-8ddef12ba9a2",
-      // },
-      // {
-      //   color: "Red",
-      //   colorCode: "#FF0000",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1686386608652-iphone12-red.jpg?alt=media&token=603a9e86-5b8c-4f8d-b61c-c1c77e60e954",
-      // },
-    ],
-    reviews: [
-      {
-        id: "6499b4887402b0efd394d8f3",
-        userId: "6499b184b0e9a8c8709821d3",
-        productId: "648437b38c44d52b9542e340",
-        rating: 4,
-        comment:
-          "good enough. I like the camera and casing. the delivery was fast too.",
-        createdDate: "2023-06-26T15:53:44.483Z",
-        user: {
-          id: "6499b184b0e9a8c8709821d3",
-          name: "Chaoo",
-          email: "example1@gmail.com",
-          emailVerified: null,
-          image:
-            "https://lh3.googleusercontent.com/a/AAcHTtcuRLwWi1vPKaQOcJlUurlhRAIIq2LgYccE8p32=s96-c",
-          hashedPassword: null,
-          createdAt: "2023-06-26T15:40:52.558Z",
-          updatedAt: "2023-06-26T15:40:52.558Z",
-          role: "USER",
-        },
-      },
-      {
-        id: "6499a110efe4e4de451c7edc",
-        userId: "6475af156bad4917456e6e1e",
-        productId: "648437b38c44d52b9542e340",
-        rating: 5,
-        comment: "I really liked it!!",
-        createdDate: "2023-06-26T14:30:40.998Z",
-        user: {
-          id: "6475af156bad4917456e6e1e",
-          name: "Charles",
-          email: "example@gmail.com",
-          emailVerified: null,
-          image:
-            "https://lh3.googleusercontent.com/a/AAcHTteOiCtILLBWiAoolIW9PJH-r5825pBDl824_8LD=s96-c",
-          hashedPassword: null,
-          createdAt: "2023-05-30T08:08:53.979Z",
-          updatedAt: "2023-05-30T08:08:53.979Z",
-          role: "ADMIN",
-        },
-      },
-    ],
+    image: "/img/prod-3.jpg",
+    
   },
   {
-    id: "64a4e9e77e7299078334019f",
+    id: 530,
     name: "Logitech MX Master 2S Wireless Mouse – Use on Any Surface, Hyper-Fast Scrolling, Ergonomic Shape, Rechargeable, Control Upto 3 Apple Mac and Windows Computers, Graphite",
     description:
       "Rem dolor maxime libero quidem quam similique placeat quasi atque. Repellat recusandae accusantium minus saepe nihil quis quisquam omnis illum. Ipsam tempora eaque nobis consectetur debitis quo. Eos libero ut eveniet. Ad possimus placeat esse laborum error est.",
     price: 17.99,
     brand: "Feil",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "Graphite",
-        colorCode: " #383838",
-        image: "/img/prod-4.jpg",
-      },
-    ],
-    reviews: [],
+    image: "/img/prod-4.jpg",
+    
   },
   {
-    id: "649d775128b6744f0f497040",
+    id: 125,
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
-      'Consequuntur quibusdam culpa omnis et. Quam similique dolor eum laudantium maiores. Eum sapiente deleniti molestiae. Veniam impedit nobis. Nisi corporis laudantium pariatur omnis eveniet.',
+      "Consequuntur quibusdam culpa omnis et. Quam similique dolor eum laudantium maiores. Eum sapiente deleniti molestiae. Veniam impedit nobis. Nisi corporis laudantium pariatur omnis eveniet.",
     price: 19.99,
     brand: "D'Amore",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-5.jpg",
-      },
-      // {
-      //   color: "Silver",
-      //   colorCode: "#C0C0C0",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-5.jpg",
+    
   },
   {
-    id: "649d775128b6744f0f497041",
+    id: 543,
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
-      'Quia hic odio voluptas et in. Est velit qui. Nostrum tempora dolore rem ducimus tenetur asperiores. Itaque magnam qui voluptas et excepturi necessitatibus ipsam voluptate molestiae.',
+      "Quia hic odio voluptas et in. Est velit qui. Nostrum tempora dolore rem ducimus tenetur asperiores. Itaque magnam qui voluptas et excepturi necessitatibus ipsam voluptate molestiae.",
     price: 54.99,
     brand: "Osinski",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-6.jpg",
-      },
-      // {
-      //   color: "Silver",
-      //   colorCode: "#C0C0C0",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-6.jpg",
+    
   },
   {
-    id: "649d775128b6744f0f497042",
+    id: 351,
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
-      'Illo dolorem tenetur explicabo quasi labore praesentium qui. Ipsum debitis debitis est consequatur ut. Ad vel in voluptatibus inventore vero.',
+      "Illo dolorem tenetur explicabo quasi labore praesentium qui. Ipsum debitis debitis est consequatur ut. Ad vel in voluptatibus inventore vero.",
     price: 79.99,
     brand: "Roob",
-    category: "Ropa / Accesorio",
+    category: "Accesorio",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-7.jpg",
-      },
-      // {
-      //   color: "Silver",
-      //   colorCode: "#C0C0C0",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-7.jpg",
+    
   },
   {
-    id: "649d775128b6744f0f497044",
+    id: 548,
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
-      'Laboriosam odit sunt. Expedita eos quisquam soluta reiciendis qui praesentium corrupti. Iusto fugit natus dolorem. Voluptatibus dignissimos sit aut itaque et. Quas ex illo voluptatibus modi voluptatem eius est enim sed.',
+      "Laboriosam odit sunt. Expedita eos quisquam soluta reiciendis qui praesentium corrupti. Iusto fugit natus dolorem. Voluptatibus dignissimos sit aut itaque et. Quas ex illo voluptatibus modi voluptatem eius est enim sed.",
     price: 59.99,
     brand: "Balistreri",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-8.jpg",
-      },
-      // {
-      //   color: "Silver",
-      //   colorCode: "#C0C0C0",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-8.jpg",
+    
   },
   {
-    id: "649d775128b6744f0f497045",
+    id: 585,
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
-      'Consequuntur suscipit molestias enim a. Impedit aut sed aperiam sint eius. Qui dolores provident veniam. Non earum impedit eius rem corrupti iure in.',
+      "Consequuntur suscipit molestias enim a. Impedit aut sed aperiam sint eius. Qui dolores provident veniam. Non earum impedit eius rem corrupti iure in.",
     price: 24.99,
     brand: "Gottlieb",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-9.jpg",
-      },
-      // {
-      //   color: "Silver",
-      //   colorCode: "#C0C0C0",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-9.jpg",
+    
   },
   {
-    id: "649d775128b6744f0f497048",
+    id: 345,
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
-      'Ullam molestiae optio saepe. Error odio et. Ab inventore magnam laudantium vel omnis repellat hic ducimus ad. Non voluptate deserunt harum consequatur repellat id dolore.',
+      "Ullam molestiae optio saepe. Error odio et. Ab inventore magnam laudantium vel omnis repellat hic ducimus ad. Non voluptate deserunt harum consequatur repellat id dolore.",
     price: 29.99,
     brand: "Zemlak",
-    category: "Ropa / Accesorio",
+    category: "Ropa",
     inStock: true,
-    images: [
-      {
-        color: "Black",
-        colorCode: "#000000",
-        image: "/img/prod-10.jpg",
-      },
-      // {
-      //   color: "Silver",
-      //   colorCode: "#C0C0C0",
-      //   image:
-      //     "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
-      // },
-    ],
-    reviews: [],
+    image: "/img/prod-10.jpg",
+    
   },
 ];
+
+
+type GetProductType = (id:number) => Product
+
+export const getProducts = async () => {
+  return products
+
+}
+export const getProduct = async (productId:number) => {
+  const product = products.find((product) => product.id === productId);
+  return product
+}
