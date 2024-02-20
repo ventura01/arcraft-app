@@ -8,8 +8,8 @@ interface ParamsProps {
 
 const Product = async ({ params }: { params: ParamsProps }) => {
   console.log("params", params);
-  const { productId } = params;
-  const products = await getProducts();
+  // const { productId } = params;
+  // const products = await getProducts();
   // console.log(product)
   return <div>{/* <ProductDetail product={product} /> */}</div>;
 };
