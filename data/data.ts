@@ -145,6 +145,18 @@ export const products: Product[] = [
     description:
       "Facere commodi eligendi. Sit incidunt nisi aut sequi et. Iure saepe eligendi voluptas rem ut qui voluptatem explicabo. Aut necessitatibus nulla et aspernatur in suscipit ea consectetur. Adipisci aperiam alias occaecati.",
     price: 49.99,
+    brand: "Fiscaraldo",
+    category: "Accesorio",
+    inStock: false,
+    image: "/img/prod-2.jpg",
+    
+  },
+  {
+    id: 85,
+    name: "Apple iPhone 12, 64GB",
+    description:
+      "Facere commodi eligendi. Sit incidunt nisi aut sequi et. Iure saepe eligendi voluptas rem ut qui voluptatem explicabo. Aut necessitatibus nulla et aspernatur in suscipit ea consectetur. Adipisci aperiam alias occaecati.",
+    price: 49.99,
     brand: "Larkin",
     category: "Accesorio",
     inStock: true,
