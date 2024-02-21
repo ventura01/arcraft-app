@@ -18,7 +18,7 @@ const Products = (props: Props) => {
   // const img1 = useTransform(scrollYProgress, [0, 1], ["30%", "-10%"]);
   // const img2 = useTransform(scrollYProgress, [0, 1], ["100%", "-250%"]);
   return (
-    <section id="about" className="relative py-20" ref={ref}>
+    <section id="about" className="relative bg-gray-50 py-20" ref={ref}>
       <div className="container mx-auto max-w-screen-xl">
         <article className="container mx-auto max-w-lg py-20">
           <motion.span

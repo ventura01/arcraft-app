@@ -16,11 +16,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
   //   console.log(products.images[0].image);
   const router = useRouter();
   return (
-    <div className="mx-4 min-h-[565px] cursor-pointer rounded-b-md rounded-t-sm border-[1.2px] border-slate-100 md:mx-0 md:rounded-t-xl">
-      <div className="flex w-full flex-col gap-1">
+    <div className="mx-4 min-h-[565px] cursor-pointer rounded-b-md shadow-md border-gray-200 bg-white rounded-t-md border-[1.2px] md:mx-0 md:rounded-t-md">
+      <div className="flex w-full flex-col">
         <div className="relative aspect-square w-full overflow-hidden">
           <Image
-            className="h-full w-full rounded-t-sm md:rounded-t-xl object-cover"
+            className="h-full w-full rounded-t-md md:rounded-t-md object-cover"
             width={300}
             height={300}
             src={products.image}
@@ -45,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
               </span>
             </div>
           </div>
-          <div className="mt-2">
+          <div className="mt-2 mb-3">
             <Button
               title="VER PRODUCTO"
               btnType="button"
