@@ -16,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
   //   console.log(products.images[0].image);
   const router = useRouter();
   return (
-    <div className="mx-4 min-h-[565px] cursor-pointer rounded-b-md shadow-md border-gray-200 bg-white rounded-t-md border-[1.2px] md:mx-0 md:rounded-t-md">
+    <div className="mx-4 min-h-[565px] cursor-pointer rounded-b-md shadow-md border-gray-300 bg-white rounded-t-md border-[1.2px] md:mx-0 md:rounded-t-md">
       <div className="flex w-full flex-col">
         <div className="relative aspect-square w-full overflow-hidden">
           <Image

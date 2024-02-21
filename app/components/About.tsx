@@ -45,7 +45,7 @@ const About = (props: Props) => {
           </motion.h2>
         </article>
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative">
+          <div className="relative mb-16 md:mb-0">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{

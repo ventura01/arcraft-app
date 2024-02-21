@@ -20,7 +20,7 @@ const Products = (props: Props) => {
   return (
     <section id="about" className="relative bg-gray-50 py-20" ref={ref}>
       <div className="container mx-auto max-w-screen-xl">
-        <article className="container mx-auto max-w-lg py-20">
+        <article className="container mx-auto max-w-lg mb-20">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{
@@ -46,7 +46,7 @@ const Products = (props: Props) => {
             Productos
           </motion.h2>
         </article>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-5">
           {products.map((product: any) => (
             <div key={product.id}><ProductCard products={product}/></div>
           ))}
