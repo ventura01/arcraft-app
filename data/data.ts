@@ -133,14 +133,13 @@ export const products: Product[] = [
     description:
       "Excepturi maxime eligendi nulla repellat architecto qui voluptatem eius. Est commodi assumenda. Aliquid eum magnam autem reiciendis omnis assumenda veritatis neque. Delectus omnis quaerat cumque occaecati. Non est asperiores doloremque vel voluptatibus.",
     price: 11.99,
-    brand: "Brakus",
+    brand: "weekender",
     category: "Ropa",
     inStock: true,
     image: "/img/prod-1.jpg",
-    
   },
   {
-    id: 85,
+    id: 852,
     name: "Apple iPhone 12, 64GB",
     description:
       "Facere commodi eligendi. Sit incidunt nisi aut sequi et. Iure saepe eligendi voluptas rem ut qui voluptatem explicabo. Aut necessitatibus nulla et aspernatur in suscipit ea consectetur. Adipisci aperiam alias occaecati.",
@@ -149,10 +148,9 @@ export const products: Product[] = [
     category: "Accesorio",
     inStock: false,
     image: "/img/prod-2.jpg",
-    
   },
   {
-    id: 85,
+    id: 853,
     name: "Apple iPhone 12, 64GB",
     description:
       "Facere commodi eligendi. Sit incidunt nisi aut sequi et. Iure saepe eligendi voluptas rem ut qui voluptatem explicabo. Aut necessitatibus nulla et aspernatur in suscipit ea consectetur. Adipisci aperiam alias occaecati.",
@@ -161,7 +159,6 @@ export const products: Product[] = [
     category: "Accesorio",
     inStock: true,
     image: "/img/prod-3.jpg",
-    
   },
   {
     id: 530,
@@ -173,7 +170,6 @@ export const products: Product[] = [
     category: "Ropa",
     inStock: true,
     image: "/img/prod-4.jpg",
-    
   },
   {
     id: 125,
@@ -185,7 +181,6 @@ export const products: Product[] = [
     category: "Ropa",
     inStock: true,
     image: "/img/prod-5.jpg",
-    
   },
   {
     id: 543,
@@ -197,7 +192,6 @@ export const products: Product[] = [
     category: "Ropa",
     inStock: true,
     image: "/img/prod-6.jpg",
-    
   },
   {
     id: 351,
@@ -209,7 +203,6 @@ export const products: Product[] = [
     category: "Accesorio",
     inStock: true,
     image: "/img/prod-7.jpg",
-    
   },
   {
     id: 548,
@@ -221,7 +214,6 @@ export const products: Product[] = [
     category: "Ropa",
     inStock: true,
     image: "/img/prod-8.jpg",
-    
   },
   {
     id: 585,
@@ -233,7 +225,6 @@ export const products: Product[] = [
     category: "Ropa",
     inStock: true,
     image: "/img/prod-9.jpg",
-    
   },
   {
     id: 345,
@@ -245,18 +236,6 @@ export const products: Product[] = [
     category: "Ropa",
     inStock: true,
     image: "/img/prod-10.jpg",
-    
   },
 ];
 
-
-type GetProductType = (id:number) => Product
-
-export const getProducts = async () => {
-  return products
-
-}
-export const getProduct = async (productId:number) => {
-  const product = products.find((product) => product.id === productId);
-  return product
-}

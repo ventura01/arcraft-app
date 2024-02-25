@@ -2,6 +2,7 @@
 
 import Button from "@/app/components/UI/Button";
 import { formatPrice } from "@/app/components/UI/formatPrice";
+// import { products } from "@/data/data";
 import { Product } from "@/data/types";
 import { ShoppingCart } from "@phosphor-icons/react";
 import Image from "next/image";
@@ -12,19 +13,24 @@ interface ProductDetailProps {
   product: Product;
 }
 
-const ProductDetail = ({ product }: ProductDetailProps) => {
-  const router = useRouter()
+
+
+const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
+  const router = useRouter();
+  
   return (
-    <div className="container mx-auto grid max-w-screen-xl grid-cols-1 py-0 md:py-20 md:grid-cols-2">
-      {product.image && (<div>
-        <Image
-          src={product.image}
-          className="object-cover "
-          height={500}
-          width={500}
-          alt={product.brand}
-        />
-      </div>)}
+    <div className="container mx-auto grid max-w-screen-xl grid-cols-1 py-0 md:grid-cols-2 md:py-20">
+      {product.image && (
+        <div>
+          <Image
+            src={product.image}
+            className="object-cover "
+            height={500}
+            width={500}
+            alt={product.brand}
+          />
+        </div>
+      )}
       <div className="mx-auto max-w-2xl p-5 pt-14 md:p-10 md:pt-0">
         <h1 className="text-4xl font-bold text-gray-700">{product?.brand}</h1>
         <hr className="my-3 w-[30%]" />
@@ -52,7 +58,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             title="REGRESAR"
             btnType="button"
             buttonStyles="bg-gray-300 text-gray-500 text-xs w-full hover:text-white hover:bg-violet-500"
-            handleClick={() => router.push('/')}
+            handleClick={() => router.push("/")}
           >
             {/* <ShoppingCart size={24} weight="fill" /> */}
           </Button>

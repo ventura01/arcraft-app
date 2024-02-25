@@ -1,56 +1,32 @@
-"use client";
-
-import React, { useRef } from "react";
-import Button from "./UI/Button";
-import Image from "next/image";
-import { delay, motion, useScroll, useTransform } from "framer-motion";
-import { products } from "@/data/data";
+import { Product } from "@/data/types";
+import React from "react";
 import ProductCard from "./ProductCard";
+import Heading from "./Headind";
 
 type Props = {};
 
-const Products = (props: Props) => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
+const getData = async () => {
+  const res = await fetch("http://localhost:3000/api/products", {
+    cache: "no-store",
   });
-  // const img1 = useTransform(scrollYProgress, [0, 1], ["30%", "-10%"]);
-  // const img2 = useTransform(scrollYProgress, [0, 1], ["100%", "-250%"]);
+  if (!res.ok) {
+    throw new Error("Algo salió mal");
+  }
+  return res.json();
+};
+
+const Products = async (props: Props) => {
+  const products: Product[] = await getData();
+  console.log(products);
   return (
-    <section id="about" className="relative bg-gray-50 py-20" ref={ref}>
-      <div className="container mx-auto max-w-screen-xl">
-        <article className="container mx-auto max-w-lg mb-20">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { delay: 0.2, duration: 0.5 },
-            }}
-            viewport={{ once: true }}
-            className="mb-5 block text-center text-[12.5px] uppercase tracking-[3px] text-gray-400"
-          >
-            Nuestros
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { delay: 0.3, duration: 0.5 },
-            }}
-            viewport={{ once: true }}
-            className="text-center text-4xl text-gray-800"
-          >
-            Productos
-          </motion.h2>
-        </article>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-5">
-          {products.map((product: any) => (
-            <div key={product.id}><ProductCard products={product}/></div>
-          ))}
-        </div>
+    <section id="products" className="container mx-auto max-w-screen-xl py-20">
+      <Heading />
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
+        {products.map((prod) => (
+          <div key={prod.id}>
+            <ProductCard products={prod} />
+          </div>
+        ))}
       </div>
     </section>
   );

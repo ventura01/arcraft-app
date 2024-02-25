@@ -6,11 +6,13 @@ import { products } from "@/data/data";
 import Button from "./UI/Button";
 import { formatPrice } from "./UI/formatPrice";
 import { useRouter } from "next/navigation";
+import { Product } from "@/data/types";
 
 type Props = {};
 interface ProductCardProps {
-  products: any;
+  products: Product;
 }
+
 
 const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
   //   console.log(products.images[0].image);
@@ -50,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
               title="VER PRODUCTO"
               btnType="button"
               buttonStyles="bg-gray-300 text-gray-500 text-xs w-full hover:text-white hover:bg-violet-500"
-              // handleClick={() => router.push(`/product/${products.id}`)}
+              handleClick={() => router.push(`/product/${products.id}`)}
             />
           </div>
         </div>
