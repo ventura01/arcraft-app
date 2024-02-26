@@ -17,7 +17,7 @@ const getData = async () => {
 
 const Products = async (props: Props) => {
   const products: Product[] = await getData();
-  console.log(products);
+  // console.log(products);
   return (
     <section id="products" className="container mx-auto max-w-screen-xl py-20">
       <Heading />
