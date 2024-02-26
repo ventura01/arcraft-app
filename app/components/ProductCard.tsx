@@ -13,16 +13,15 @@ interface ProductCardProps {
   products: Product;
 }
 
-
 const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
   //   console.log(products.images[0].image);
   const router = useRouter();
   return (
-    <div className="mx-4 min-h-[565px] cursor-pointer rounded-b-md shadow-md border-gray-300 bg-white rounded-t-md border-[1.2px] md:mx-0 md:rounded-t-md">
+    <div className="mx-4 cursor-pointer rounded-b-md rounded-t-md border-[1.2px] border-gray-300 bg-white shadow-md md:mx-0 md:rounded-t-md">
       <div className="flex w-full flex-col">
         <div className="relative aspect-square w-full overflow-hidden">
           <Image
-            className="h-full w-full rounded-t-md md:rounded-t-md object-cover"
+            className="h-full w-full rounded-t-md object-cover md:rounded-t-md"
             width={300}
             height={300}
             priority
@@ -36,9 +35,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
               {products.brand}
             </h2>
             {/* <h3>{products.name}</h3> */}
-            <p className="text-sm text-gray-700">
+            {/* <p className="text-sm text-gray-700">
               {products.description.substring(0, 106) + "..."}
-            </p>
+            </p> */}
             <p className="text-xs uppercase text-slate-400">
               {products.category}
             </p>
@@ -48,7 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
               </span>
             </div>
           </div>
-          <div className="mt-2 mb-3">
+          <div className="mb-3 mt-2">
             <Button
               title="VER PRODUCTO"
               btnType="button"
