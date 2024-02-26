@@ -6,7 +6,7 @@ import Heading from "./Headind";
 type Props = {};
 
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/products", {
+  const res = await fetch(process.env.URL +"/api/products", {
     cache: "no-store",
   });
   if (!res.ok) {

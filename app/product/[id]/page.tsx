@@ -13,7 +13,7 @@ interface ParamsProps {
 
 const getData = async (id: string) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+  const res = await fetch(process.env.URL + `/api/products/${id}`, {
     cache: "no-store",
   });
   if (!res.ok) {
