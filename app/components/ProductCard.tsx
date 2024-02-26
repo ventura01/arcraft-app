@@ -25,6 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
             className="h-full w-full rounded-t-md md:rounded-t-md object-cover"
             width={300}
             height={300}
+            priority
             src={products.image}
             alt={products.name}
           />

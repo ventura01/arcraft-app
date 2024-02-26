@@ -36,6 +36,7 @@ const ProductDetail = async ({ params }: { params: ParamsProps }) => {
             className="object-cover "
             height={500}
             width={500}
+            priority
             alt={sinleProduct.brand}
           />
         </div>
