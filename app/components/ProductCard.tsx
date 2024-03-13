@@ -16,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
   //   console.log(products.images[0].image);
   const router = useRouter();
   return (
-    <div className="mx-4 min-h-[565px] cursor-pointer rounded-b-md shadow-md border-gray-200 bg-white rounded-t-md border-[1.2px] md:mx-0 md:rounded-t-md">
+    <div className="mx-4 cursor-pointer rounded-b-md shadow-md border-gray-200 bg-white rounded-t-md border-[1.2px] md:mx-0 md:rounded-t-md">
       <div className="flex w-full flex-col">
         <div className="relative aspect-square w-full overflow-hidden">
           <Image
@@ -33,9 +33,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
               {products.brand}
             </h2>
             {/* <h3>{products.name}</h3> */}
-            <p className="text-sm text-gray-700">
+            {/* <p className="text-sm text-gray-700">
               {products.description.substring(0, 106) + "..."}
-            </p>
+            </p> */}
             <p className="text-xs uppercase text-slate-400">
               {products.category}
             </p>
