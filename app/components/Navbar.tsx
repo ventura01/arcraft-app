@@ -65,7 +65,7 @@ const Navbar = (props: Props) => {
               >
                 <Link
                   href={link.url}
-                  className="before:origin-[100%, 50%] before:scale-y-[1 ] before:scale-z-[1] hover:before:scale-z-[1] relative pb-2 uppercase tracking-widest before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-purple-600 before:transition-all before:duration-300 before:ease-in-out before:will-change-transform before:content-[''] hover:before:scale-x-[1] hover:before:scale-y-[1]"
+                  className="before:origin-[100%, 50%] before:scale-y-[1] before:scale-z-[1] hover:before:scale-z-[1] relative pb-2 uppercase tracking-widest before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-purple-600 before:transition-all before:duration-300 before:ease-in-out before:will-change-transform before:content-[''] hover:before:scale-x-[1] hover:before:scale-y-[1]"
                 >
                   {link.title}
                 </Link>
