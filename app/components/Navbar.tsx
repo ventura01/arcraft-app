@@ -47,10 +47,10 @@ const Navbar = (props: Props) => {
         <div>
           <Link
             href="/"
-            className="text-[18px] font-light uppercase text-gray-700"
+            className="text-[18px] font-semibold uppercase text-gray-700"
           >
             tienda{' '}
-            <span className="font-bold uppercase text-gray-500">
+            <span className="font-light uppercase text-gray-500">
               zulma
             </span>
           </Link>
